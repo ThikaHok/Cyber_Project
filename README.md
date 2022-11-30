@@ -14,7 +14,12 @@ https://docs.python.org/3/library/threading.html
 - import smtplib (Class to send email)
 https://docs.python.org/3/library/smtplib.html
 
-#How Does the Project Work
+#Feature
+- Store log locally (Local keyloggers)
+- Report logs to email or remote server (remote keyloggers)
+- Log screenshots
+- Start with system startup
 
+#How Does the Project Work
 
 #Limitation
